@@ -18,6 +18,13 @@
 .block {
   display: inline-block;
   float: right;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-left: 1rem;
+    font-weight: bold;
+  }
 }
 
 .hone {

@@ -22,7 +22,22 @@ class Layout extends React.Component {
             </Link>
           </h1>
           <ul className={Sect.block}>
-            <li>test</li>
+            <li>
+              <Link className={Sect.link1} to={`/`}>
+                Blog
+              </Link>
+            </li>
+
+            <li>
+              <Link className={Sect.link1} to={`/`}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link className={Sect.link1} to={`/blogposts`}>
+                About
+              </Link>
+            </li>
           </ul>
         </>
       )
