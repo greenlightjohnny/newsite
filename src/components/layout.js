@@ -16,25 +16,25 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <>
-          <h1 className={Sect.hone}>
+          <h3 className={Sect.hone}>
             <Link className={Sect.link1} to={`/`}>
               {title}
             </Link>
-          </h1>
+          </h3>
           <ul className={Sect.block}>
             <li>
-              <Link className={Sect.link1} to={`/`}>
-                Blog
+              <Link className={Sect.link1} to={`/blogposts`}>
+                Latest
               </Link>
             </li>
 
             <li>
-              <Link className={Sect.link1} to={`/`}>
+              <Link className={Sect.link1} to={`/contact`}>
                 Contact
               </Link>
             </li>
             <li>
-              <Link className={Sect.link1} to={`/blogposts`}>
+              <Link className={Sect.link1} to={`/about`}>
                 About
               </Link>
             </li>
@@ -43,27 +43,54 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <>
+          <h3 className={Sect.hone}>
+            <Link className={Sect.link1} to={`/`}>
+              {title}
+            </Link>
+          </h3>
+          <ul className={Sect.block}>
+            <li>
+              <Link className={Sect.link1} to={`/blogposts`}>
+                Latest
+              </Link>
+            </li>
+
+            <li>
+              <Link className={Sect.link1} to={`/contact`}>
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link className={Sect.link1} to={`/about`}>
+                About
+              </Link>
+            </li>
+          </ul>
+        </>
+
+        //   <h3
+        //     style={{
+        //       fontFamily: `Montserrat, sans-serif`,
+        //       marginTop: 0,
+        //     }}
+        //   >
+        //     <Link
+        //       style={{
+        //         boxShadow: `none`,
+        //         textDecoration: `none`,
+        //         color: `inherit`,
+        //       }}
+        //       to={`/`}
+        //     >
+        //       {title}
+        //     </Link>
+        //   </h3>
+        //
       )
     }
     return (
-      <>
+      <div className={Sect.large}>
         <header className={Sect.header}>{header}</header>
         <div
           className={Sect.container}
@@ -72,13 +99,13 @@ class Layout extends React.Component {
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
         </div>
-      </>
+
+        <footer className={Sect.footer}>
+          © {new Date().getFullYear()}, all rights reserved
+          {` `}
+        </footer>
+      </div>
     )
   }
 }
