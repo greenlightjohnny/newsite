@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Header from "./Header"
 import { rhythm, scale } from "../utils/typography"
 import { withPlugin } from "tinacms"
 import { createRemarkButton } from "gatsby-tinacms-remark"
 import slugify from "slugify"
+import Sect from "./layout.module.scss"
 
 class Layout extends React.Component {
   render() {
@@ -14,24 +15,16 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+        <>
+          <h1 className={Sect.hone}>
+            <Link className={Sect.link1} to={`/`}>
+              {title}
+            </Link>
+          </h1>
+          <ul className={Sect.block}>
+            <li>test</li>
+          </ul>
+        </>
       )
     } else {
       header = (
@@ -55,22 +48,22 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <>
+        <header className={Sect.header}>{header}</header>
+        <div
+          className={Sect.container}
+          style={{
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </div>
+      </>
     )
   }
 }
