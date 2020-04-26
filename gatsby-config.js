@@ -16,6 +16,13 @@ module.exports = {
           "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
           "gatsby-tinacms-json",
+
+          {
+            resolve: "gatsby-tinacms-git",
+            options: {
+              sshKey: process.env.SSH_KEY,
+            },
+          },
         ],
         sidebar: {
           hidden: process.env.NODE_ENV === "production",
