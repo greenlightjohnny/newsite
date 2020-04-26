@@ -13,7 +13,6 @@ module.exports = {
       resolve: "gatsby-plugin-tinacms",
       options: {
         plugins: [
-          "gatsby-tinacms-git",
           "gatsby-tinacms-remark",
           "gatsby-tinacms-json",
 
