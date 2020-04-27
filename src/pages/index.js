@@ -3,6 +3,9 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { remarkForm } from "gatsby-tinacms-remark"
 import Sect from "../components/layout.module.scss"
+import MedPhoto from "../../content/assets/med.svg"
+import SciPhoto from "../../content/assets/sci.svg"
+import QPhoto from "../../content/assets/q.svg"
 
 class Landing extends React.Component {
   render() {
@@ -13,13 +16,41 @@ class Landing extends React.Component {
     return (
       <>
         <Layout location={this.props.location} title={siteTitle}>
-          <h3>{data.markdownRemark.frontmatter.title}</h3>
-          <section
-            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-          ></section>
+          <div className={Sect.sect1}>
+            <div className={Sect.flex1}>
+              <h3 className={Sect.mid}>
+                {data.markdownRemark.frontmatter.title}
+              </h3>
+              <div
+                className={Sect.mid}
+                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+              ></div>
+            </div>
+            <div>
+              <img src={MedPhoto}></img>
+            </div>
+          </div>
           <div className={Sect.sect2}>
-            <div className={Sect.mid}>
-              <h3>testing</h3>
+            <div className={Sect.flex2}>
+              <div>
+                <img src={SciPhoto}></img>
+              </div>
+              <div>
+                <h3>testing</h3>
+                <p>Again more info</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={Sect.sect3}>
+            <div className={Sect.flex3}>
+              <div>
+                <h3>testing</h3>
+                <p>Again more info</p>
+              </div>
+              <div>
+                <img src={QPhoto}></img>
+              </div>
             </div>
           </div>
         </Layout>
