@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { remarkForm } from "gatsby-tinacms-remark"
+import Sect from "../components/layout.module.scss"
 
 class Landing extends React.Component {
   render() {
@@ -10,12 +11,19 @@ class Landing extends React.Component {
     //const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <h3>{data.markdownRemark.frontmatter.title}</h3>
-        <section
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        ></section>
-      </Layout>
+      <>
+        <Layout location={this.props.location} title={siteTitle}>
+          <h3>{data.markdownRemark.frontmatter.title}</h3>
+          <section
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          ></section>
+          <div className={Sect.sect2}>
+            <div className={Sect.mid}>
+              <h3>testing</h3>
+            </div>
+          </div>
+        </Layout>
+      </>
     )
   }
 }

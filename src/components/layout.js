@@ -97,10 +97,8 @@ class Layout extends React.Component {
           style={{
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
-        >
-          <main>{children}</main>
-        </div>
-
+        ></div>
+        <main>{children}</main>
         <footer className={Sect.footer}>
           © {new Date().getFullYear()}, all rights reserved
           {` `}
