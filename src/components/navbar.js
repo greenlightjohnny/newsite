@@ -21,6 +21,15 @@ function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/basics">Basics</Link>
+          </li>
+          <li>
+            <Link to="/traditional">Traditional</Link>
+          </li>
+          <li>
+            <Link to="/alternatives">Alternative</Link>
+          </li>
+          <li>
             <Link to="/blogposts">Latest</Link>
           </li>
           <li>

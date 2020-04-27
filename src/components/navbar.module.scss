@@ -201,14 +201,14 @@
 .navspan:before {
   height: 4px;
   border-radius: 1px;
-  color: #ed3e44;
+  color: #475edf;
   width: 100%;
 }
 
 .navspan {
   position: relative;
   display: block;
-  background: #ed3e44;
+  background: #475edf;
   transform: translateY(1px);
   transition: all 0ms 300ms;
 
@@ -222,7 +222,7 @@
   position: absolute;
   left: 0;
   bottom: 10px;
-  background: #ed3e44;
+  background: #475edf;
   transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
     transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -232,7 +232,7 @@
   position: absolute;
   left: 0;
   top: 10px;
-  background: #ed3e44;
+  background: #475edf;
   transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
     transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }

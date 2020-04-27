@@ -1,3 +1,8 @@
+body,
+html {
+  font-family: "typeface-montserrat";
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -12,6 +17,11 @@
   min-height: 100vh;
   position: relative;
   height: 100%;
+  font-family: "montserrat";
+
+  h3 {
+    font-family: "montserrat";
+  }
   //align-items: stretch;
 }
 
@@ -90,6 +100,10 @@
     flex: 1;
     min-width: 250px;
   }
+
+  & img {
+    margin-bottom: 2rem;
+  }
 }
 
 .flex2 {
@@ -107,7 +121,8 @@
     padding-left: 0.5rem;
   }
   & img {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -132,7 +147,8 @@
     }
 
     & img {
-      margin-top: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -140,4 +156,24 @@
 .mcon {
   max-width: 900px;
   margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 50rem;
+  color: #fff;
+  background-color: #475edf;
+  border-color: #475edf;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  svg {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+  }
 }

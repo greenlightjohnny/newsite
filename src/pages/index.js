@@ -1,11 +1,13 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { remarkForm } from "gatsby-tinacms-remark"
 import Sect from "../components/layout.module.scss"
 import MedPhoto from "../../content/assets/med.svg"
 import SciPhoto from "../../content/assets/sci.svg"
 import QPhoto from "../../content/assets/q.svg"
+import Arrow from "../../content/assets/next.svg"
+import Two from "../../content/assets/two.svg"
 
 class Landing extends React.Component {
   render() {
@@ -25,6 +27,23 @@ class Landing extends React.Component {
                 className={Sect.mid}
                 dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
               ></div>
+              <Link className={Sect.button1} to="/basics">
+                Basics{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </Link>
             </div>
             <div>
               <img src={MedPhoto}></img>
@@ -36,14 +55,31 @@ class Landing extends React.Component {
                 <img src={SciPhoto}></img>
               </div>
               <div>
-                <h3>testing</h3>
+                <h1>Testing</h1>
                 <p>
                   Again more info Again more info Again more info Again more
                   info Again more info Again more info Again more info Again
                   more infoAgain more info Again more info Again more info Again
                   more info Again more info Again more info Again more info
-                  Again more info{" "}
+                  Again more info
                 </p>
+                <Link className={Sect.button1} to="/basics">
+                  Basics{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 19"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
@@ -53,6 +89,23 @@ class Landing extends React.Component {
               <div>
                 <h3>testing</h3>
                 <p>Again more info</p>
+                <Link className={Sect.button1} to="/basics">
+                  Basics{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 20 19"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </Link>
               </div>
               <div>
                 <img src={QPhoto}></img>
