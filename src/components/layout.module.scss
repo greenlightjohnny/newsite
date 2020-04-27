@@ -9,8 +9,9 @@
 }
 
 .large {
-  //min-height: 100vh;
+  min-height: 100vh;
   position: relative;
+  height: 100%;
   //align-items: stretch;
 }
 
@@ -134,4 +135,9 @@
       margin-top: 2rem;
     }
   }
+}
+
+.mcon {
+  max-width: 900px;
+  margin: 0 auto;
 }

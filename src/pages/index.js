@@ -37,7 +37,13 @@ class Landing extends React.Component {
               </div>
               <div>
                 <h3>testing</h3>
-                <p>Again more info</p>
+                <p>
+                  Again more info Again more info Again more info Again more
+                  info Again more info Again more info Again more info Again
+                  more infoAgain more info Again more info Again more info Again
+                  more info Again more info Again more info Again more info
+                  Again more info{" "}
+                </p>
               </div>
             </div>
           </div>

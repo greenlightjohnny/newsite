@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "./Header"
+import Navbar from "./navbar"
 import { rhythm, scale } from "../utils/typography"
 import { withPlugin } from "tinacms"
 import { createRemarkButton } from "gatsby-tinacms-remark"
@@ -91,7 +91,8 @@ class Layout extends React.Component {
     }
     return (
       <div className={Sect.large}>
-        <header className={Sect.header}>{header}</header>
+        {/* <header className={Sect.header}>{header}</header> */}
+        <Navbar />
         <div
           className={Sect.container}
           style={{
