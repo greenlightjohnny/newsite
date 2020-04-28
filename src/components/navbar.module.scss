@@ -4,6 +4,10 @@
   }
 }
 
+.outer {
+  width: 100%;
+  box-shadow: 0.33333rem 0 1.33333rem rgba(87, 87, 87, 0.1);
+}
 .container {
   max-width: 1300px;
   margin: 0 auto;
