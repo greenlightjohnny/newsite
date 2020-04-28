@@ -19,20 +19,17 @@ class Landing extends React.Component {
     const { isEditing, setIsEditing } = this.props
     //const posts = data.allMarkdownRemark.edges
 
-    {
-      process.env.NODE_ENV != "production" && (
-        <TinaButton primary onClick={() => setIsEditing(p => !p)}>
-          {isEditing ? "Preview" : "Edit"}
-        </TinaButton>
-      )
-    }
-
     return (
       <>
         <Layout location={this.props.location} title={siteTitle}>
           <div className={Sect.sect1}>
             <div className={Sect.flex1}>
               <h3 className={Sect.mid}>
+                {process.env.NODE_ENV !== "production" && (
+                  <TinaButton primary onClick={() => setIsEditing(p => !p)}>
+                    {isEditing ? "Preview" : "Edit"}
+                  </TinaButton>
+                )}
                 {data.markdownRemark.frontmatter.title}
               </h3>
               <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
@@ -164,7 +161,7 @@ const BlogPostForm = {
   ],
 }
 
-export default remarkForm(Landing, BlogPostForm)
+export default liveRemarkForm(Landing, BlogPostForm)
 export const query = graphql`
   query MyQuery2 {
     site {
@@ -178,7 +175,7 @@ export const query = graphql`
         title
       }
       html
-      rawMarkdownBody
+
       ...TinaRemark
     }
   }

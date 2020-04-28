@@ -28,7 +28,7 @@ function Navbar() {
               <Link to="/traditional">Traditional</Link>
             </li>
             <li>
-              <Link to="/alternatives">Alternative</Link>
+              <Link to="/alternative">Alternative</Link>
             </li>
             <li>
               <Link to="/blogposts">Latest</Link>
