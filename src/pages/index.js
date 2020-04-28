@@ -1,11 +1,14 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import { remarkForm } from "gatsby-tinacms-remark"
+import { remarkForm, liveRemarkForm } from "gatsby-tinacms-remark"
 import Sect from "../components/layout.module.scss"
 import MedPhoto from "../../content/assets/med.svg"
 import SciPhoto from "../../content/assets/sci.svg"
 import QPhoto from "../../content/assets/q.svg"
+import { Wysiwyg } from "@tinacms/fields"
+import { TinaField } from "tinacms"
+import { Button as TinaButton } from "@tinacms/styles"
 import Arrow from "../../content/assets/next.svg"
 import Two from "../../content/assets/two.svg"
 
@@ -13,7 +16,16 @@ class Landing extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+    const { isEditing, setIsEditing } = this.props
     //const posts = data.allMarkdownRemark.edges
+
+    {
+      process.env.NODE_ENV != "production" && (
+        <TinaButton primary onClick={() => setIsEditing(p => !p)}>
+          {isEditing ? "Preview" : "Edit"}
+        </TinaButton>
+      )
+    }
 
     return (
       <>
@@ -23,10 +35,14 @@ class Landing extends React.Component {
               <h3 className={Sect.mid}>
                 {data.markdownRemark.frontmatter.title}
               </h3>
-              <div
-                className={Sect.mid}
-                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-              ></div>
+              <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
+                <div
+                  className={Sect.mid}
+                  dangerouslySetInnerHTML={{
+                    __html: data.markdownRemark.html,
+                  }}
+                ></div>
+              </TinaField>
               <Link className={Sect.button1} to="/basics">
                 Basics{" "}
                 <svg
@@ -56,13 +72,7 @@ class Landing extends React.Component {
               </div>
               <div>
                 <h1>Testing</h1>
-                <p>
-                  Again more info Again more info Again more info Again more
-                  info Again more info Again more info Again more info Again
-                  more infoAgain more info Again more info Again more info Again
-                  more info Again more info Again more info Again more info
-                  Again more info
-                </p>
+                <p>{}</p>
                 <Link className={Sect.button1} to="/basics">
                   Basics{" "}
                   <svg
@@ -168,6 +178,7 @@ export const query = graphql`
         title
       }
       html
+      rawMarkdownBody
       ...TinaRemark
     }
   }
