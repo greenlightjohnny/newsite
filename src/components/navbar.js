@@ -21,17 +21,58 @@ function Navbar() {
             <li onClick={() => setNavnames(false)}>
               <Link to="/">Home</Link>
             </li>
+
             <li>
-              <Link to="/basics">Basics</Link>
+              <Link to="/basics">
+                Basics
+                <div className={Style.drop}>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                </div>
+              </Link>
             </li>
             <li>
-              <Link to="/traditional">Traditional</Link>
+              <Link to="/traditional">
+                Traditional
+                <div className={Style.drop}>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                </div>
+              </Link>
             </li>
             <li>
-              <Link to="/alternative">Alternative</Link>
+              <Link to="/alternative">
+                Alternative
+                <div className={Style.drop}>
+                  <Link to="/">link1</Link>
+                  <Link to="/">link2</Link>
+                  <Link to="/">link3</Link>
+                  <Link to="/">link4</Link>
+                  <Link to="/">link5</Link>
+                  <Link to="/">link6</Link>
+                </div>
+              </Link>
             </li>
             <li>
-              <Link to="/blogposts">Latest</Link>
+              <Link to="/blogposts">
+                Latest{" "}
+                <div className={Style.drop}>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
+                </div>
+              </Link>
             </li>
             <li>
               <Link to="/about">About</Link>
