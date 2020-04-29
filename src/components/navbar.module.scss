@@ -8,6 +8,10 @@
   width: 100%;
   box-shadow: 0.33333rem 0 1.33333rem rgba(87, 87, 87, 0.1);
   position: relative;
+
+  h3 {
+    margin-bottom: 0;
+  }
 }
 .container {
   max-width: 1300px;
@@ -15,6 +19,7 @@
   display: flex;
   flex: 1;
   justify-content: space-between;
+  padding-bottom: 12px;
 
   h3 {
     display: inline-block;
@@ -107,6 +112,7 @@
     margin: 0 auto;
     margin-top: 4rem;
     font-weight: bold;
+    transform: translatey(-120%);
 
     @include tabletL {
       display: flex;
@@ -114,10 +120,13 @@
       margin-top: 0;
       flex-direction: row;
       justify-content: flex-end;
+      transform: translatey(0);
 
       li {
-        margin-left: 30px;
-        margin-top: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: pointer;
       }
     }
   }
@@ -127,7 +136,7 @@
     // margin-left: 40%;
     //padding-top: 1rem;
     //padding-bottom: 1rem;
-    height: 53px;
+    //height: 53px;
     opacity: 1;
 
     margin-right: 5%;
@@ -149,6 +158,10 @@
     margin-top: 4rem;
     font-weight: bold;
 
+    a {
+      color: #fff;
+    }
+
     @include tabletL {
       display: flex;
       flex: 1;
@@ -157,8 +170,8 @@
       justify-content: flex-end;
 
       li {
-        margin-left: 30px;
-        margin-top: 10px;
+        padding-left: 30px;
+        padding-top: 10px;
       }
     }
   }
@@ -180,7 +193,7 @@
 .navbutton {
   display: block;
   position: fixed;
-  top: 10px;
+  top: 7px;
   right: 1rem;
 
   width: 30px;
@@ -188,7 +201,7 @@
   background-color: transparent;
   border: none;
   padding: 0;
-  margin-top: 4px;
+  //margin-top: 4px;
   color: #010101;
   cursor: pointer;
   z-index: 3;
@@ -265,16 +278,19 @@
 
 .drop {
   position: absolute;
-  top: 30px;
+  top: 40px;
   z-index: 5;
   visibility: hidden;
   background-color: #fff;
   width: 280px;
   margin-left: -140px;
   left: 50%;
+
   padding: 32px;
-  border-radius: 4px;
+  border-radius: 7px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15), 0 8px 8px 0 rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
   a {
     display: block;
   }
@@ -286,4 +302,20 @@ li {
 
 li:hover .drop {
   visibility: visible;
+  opacity: 1;
+}
+
+.darrow::after {
+  content: "";
+  display: inline-block;
+  height: 7px;
+  margin-left: 8px;
+  position: relative;
+  top: -3px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  vertical-align: middle;
+  width: 7px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
 }

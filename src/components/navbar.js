@@ -23,33 +23,33 @@ function Navbar() {
             </li>
 
             <li>
-              <Link to="/basics">
+              <Link className={Style.darrow} to="/basics">
                 Basics
                 <div className={Style.drop}>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
+                  <Link to="/">link1</Link>
+                  <Link to="/">link2</Link>
+                  <Link to="/">link3</Link>
+                  <Link to="/">link4</Link>
+                  <Link to="/">link5</Link>
+                  <Link to="/">link6</Link>
                 </div>
               </Link>
             </li>
             <li>
-              <Link to="/traditional">
+              <Link className={Style.darrow} to="/traditional">
                 Traditional
                 <div className={Style.drop}>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
+                  <Link to="/">link1</Link>
+                  <Link to="/">link2</Link>
+                  <Link to="/">link3</Link>
+                  <Link to="/">link4</Link>
+                  <Link to="/">link5</Link>
+                  <Link to="/">link6</Link>
                 </div>
               </Link>
             </li>
             <li>
-              <Link to="/alternative">
+              <Link className={Style.darrow} to="/alternative">
                 Alternative
                 <div className={Style.drop}>
                   <Link to="/">link1</Link>
@@ -62,23 +62,20 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/blogposts">
+              <Link className={Style.darrow} to="/blogposts">
                 Latest{" "}
                 <div className={Style.drop}>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
+                  <Link to="/">link1</Link>
+                  <Link to="/">link2</Link>
+                  <Link to="/">link3</Link>
+                  <Link to="/">link4</Link>
+                  <Link to="/">link5</Link>
+                  <Link to="/">link6</Link>
                 </div>
               </Link>
             </li>
             <li>
               <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
