@@ -278,7 +278,7 @@
 
 .drop {
   position: absolute;
-  top: 40px;
+  top: 50px;
   z-index: 5;
   visibility: hidden;
   background-color: #fff;
@@ -318,4 +318,18 @@ li:hover .drop {
   width: 7px;
   border-bottom: 2px solid;
   border-right: 2px solid;
+}
+
+.drop::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg);
+  top: -12px;
+  left: 144px;
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 6px;
+  box-shadow: -1px -1px 3px 0 rgba(0, 0, 0, 0.15);
 }
