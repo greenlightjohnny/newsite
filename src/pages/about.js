@@ -1,24 +1,36 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { remarkForm } from "gatsby-tinacms-remark"
+import { remarkForm, liveRemarkForm } from "gatsby-tinacms-remark"
 import Sect from "../components/layout.module.scss"
 import Title from "../components/seo"
+import { Button as TinaButton } from "@tinacms/styles"
+import { Wysiwyg } from "@tinacms/fields"
+import { TinaField } from "tinacms"
 
 class Landing extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
+    const { isEditing, setIsEditing } = this.props
     //const posts = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        {process.env.NODE_ENV !== "production" && (
+          <TinaButton primary onClick={() => setIsEditing(p => !p)}>
+            {isEditing ? "Preview" : "Edit"}
+          </TinaButton>
+        )}
         <Title title="About HER2.ME" />
+
         <div className={Sect.mcon}>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
-          <section
-            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-          ></section>
+          <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
+            <section
+              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            ></section>
+          </TinaField>
         </div>
       </Layout>
     )
@@ -61,7 +73,7 @@ const BlogPostForm = {
   ],
 }
 
-export default remarkForm(Landing, BlogPostForm)
+export default liveRemarkForm(Landing, BlogPostForm)
 export const query = graphql`
   query MyQuery3 {
     site {

@@ -28,11 +28,11 @@ function Navbar() {
               <Link className={Style.darrow} to="/basics">
                 Basics
                 <div className={Style.drop}>
-                  <Link to="/">link1</Link>
-                  <Link to="/">link2</Link>
-                  <Link to="/">link3</Link>
-                  <Link to="/">link4</Link>
-                  <Link to="/">link5</Link>
+                  <Link to="/">What is HER2?</Link>
+                  <Link to="/">Stages</Link>
+                  <Link to="/">History</Link>
+                  <Link to="/">HER2+ (Positive)</Link>
+                  <Link to="/">HER2- (Negative)</Link>
                   <Link to="/">link6</Link>
                 </div>
               </Link>
@@ -41,12 +41,15 @@ function Navbar() {
               <Link className={Style.darrow} to="/traditional">
                 Traditional
                 <div className={Style.drop}>
-                  <Link to="/">link1</Link>
-                  <Link to="/">link2</Link>
-                  <Link to="/">link3</Link>
-                  <Link to="/">link4</Link>
-                  <Link to="/">link5</Link>
-                  <Link to="/">link6</Link>
+                  <Link to="/">Chemotherapy</Link>
+                  <Link to="/">Immunotherapy</Link>
+                  <Link to="/">Surgery</Link>
+                  <Link to="/">Radiation</Link>
+                  <Link to="/">Herceptin (Trastuzumab)</Link>
+                  <Link to="/">Perjeta (Pertuzumab)</Link>
+                  <Link to="/">Kadcyla</Link>
+                  <Link to="/">Nerlynx (Neratinib)</Link>
+                  <Link to="/">Tykerb (Lapatinib)</Link>
                 </div>
               </Link>
             </li>
@@ -54,9 +57,9 @@ function Navbar() {
               <Link className={Style.darrow} to="/alternative">
                 Alternative
                 <div className={Style.drop}>
-                  <Link to="/">link1</Link>
-                  <Link to="/">link2</Link>
-                  <Link to="/">link3</Link>
+                  <Link to="/">Clinical Trials</Link>
+                  <Link to="/">Fake Treatments</Link>
+                  <Link to="/">Herceptin (Trastuzumab)</Link>
                   <Link to="/">link4</Link>
                   <Link to="/">link5</Link>
                   <Link to="/">link6</Link>
