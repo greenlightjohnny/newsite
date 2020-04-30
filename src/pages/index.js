@@ -22,19 +22,18 @@ class Landing extends React.Component {
     return (
       <>
         <Layout location={this.props.location} title={siteTitle}>
+          {process.env.NODE_ENV !== "production" && (
+            <TinaButton primary onClick={() => setIsEditing(p => !p)}>
+              {isEditing ? "Preview" : "Edit"}
+            </TinaButton>
+          )}
           <div className={Sect.sect1}>
             <div className={Sect.flex1}>
-              <h3 className={Sect.mid}>
-                {process.env.NODE_ENV !== "production" && (
-                  <TinaButton primary onClick={() => setIsEditing(p => !p)}>
-                    {isEditing ? "Preview" : "Edit"}
-                  </TinaButton>
-                )}
+              <h1 className={Sect.htop}>
                 {data.markdownRemark.frontmatter.title}
-              </h3>
+              </h1>
               <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
                 <div
-                  className={Sect.mid}
                   dangerouslySetInnerHTML={{
                     __html: data.markdownRemark.html,
                   }}
@@ -58,8 +57,8 @@ class Landing extends React.Component {
                 </svg>
               </Link>
             </div>
-            <div>
-              <img src={MedPhoto}></img>
+            <div className={Sect.medphoto}>
+              <img src={QPhoto}></img>
             </div>
           </div>
           <div className={Sect.sect2}>
@@ -68,10 +67,19 @@ class Landing extends React.Component {
                 <img src={SciPhoto}></img>
               </div>
               <div>
-                <h1>Testing</h1>
-                <p>{}</p>
-                <Link className={Sect.button1} to="/basics">
-                  Basics{" "}
+                <h1>Traditional</h1>
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum."
+                </p>
+                <Link className={Sect.button1} to="/traditional">
+                  Traditional{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -94,10 +102,19 @@ class Landing extends React.Component {
           <div className={Sect.sect3}>
             <div className={Sect.flex3}>
               <div>
-                <h3>testing</h3>
-                <p>Again more info</p>
-                <Link className={Sect.button1} to="/basics">
-                  Basics{" "}
+                <h1>Alternative</h1>
+                <p>
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum."
+                </p>
+                <Link className={Sect.button1} to="/alternative">
+                  Alternative{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

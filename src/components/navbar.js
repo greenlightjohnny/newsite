@@ -9,7 +9,9 @@ function Navbar() {
     <div className={Style.outer}>
       <div className={Style.container}>
         <h3>
-          <Link to="/">NewSite</Link>
+          <Link to="/">
+            New.<span className={Style.me}>ME</span>
+          </Link>
         </h3>
 
         <nav

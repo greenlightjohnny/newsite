@@ -80,7 +80,8 @@ html {
 }
 
 .mid {
-  * {
+  *,
+  h1 {
     margin-top: 1rem;
     //padding-top: 1rem;
     //margin-left: 1rem;
@@ -97,13 +98,11 @@ html {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  h3 {
-    margin-left: 0.5rem;
-  }
   & div {
     max-width: 600px;
     flex: 1;
     min-width: 250px;
+    padding-left: 0.5rem;
   }
 
   & img {
@@ -176,9 +175,24 @@ html {
   width: 150px;
   text-align: center;
   margin-bottom: 3rem;
+  font-weight: bold;
+  box-shadow: 0 20px 60px -5px rgba(0, 0, 0, 0.3),
+    0 7px 36px -10px rgba(0, 0, 0, 0.33);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 30px 80px 3px rgba(0, 0, 0, 0.3),
+      0 20px 50px -10px rgba(0, 0, 0, 0.3);
+  }
 
   svg {
     margin-left: 0.5rem;
     margin-top: 3px;
   }
+}
+
+.medphoto {
+  margin-top: 5rem;
 }

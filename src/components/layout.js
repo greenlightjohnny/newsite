@@ -95,13 +95,13 @@ class Layout extends React.Component {
         <Navbar />
         <div
           className={Sect.container}
-          style={{
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
+          // style={{
+          //   padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          // }}
         ></div>
         <main>{children}</main>
         <div className={Sect.ftop}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 70">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 90">
             <path
               fill="#fff"
               fill-rule="evenodd"
