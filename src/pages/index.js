@@ -30,7 +30,8 @@ class Landing extends React.Component {
           <div className={Sect.sect1}>
             <div className={Sect.flex1}>
               <h1 className={Sect.htop}>
-                {data.markdownRemark.frontmatter.title}
+                {/* {data.markdownRemark.frontmatter.title} */}
+                HER2.<span className={Sect.me}>ME</span>
               </h1>
               <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
                 <div
@@ -135,6 +136,11 @@ class Landing extends React.Component {
                 <img src={QPhoto}></img>
               </div>
             </div>
+          </div>
+
+          <div className={Sect.banner}>
+            <h2>Lorem Lorem</h2>
+            <p>p3w asdf aasdf asdf sdf agsdafg</p>
           </div>
         </Layout>
       </>

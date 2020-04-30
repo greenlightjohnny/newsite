@@ -196,3 +196,29 @@ html {
 .medphoto {
   margin-top: 5rem;
 }
+
+.me {
+  color: #475edf;
+}
+
+///////////////////////BANNER///////
+////////////////////////////
+////////////////////////////////////////////////
+.banner {
+  background-color: #475edf;
+  color: #fff;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: "montserrat";
+
+  h2 {
+    font-family: "montserrat";
+    padding-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    padding-bottom: 2rem;
+  }
+}

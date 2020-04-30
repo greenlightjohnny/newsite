@@ -10,7 +10,7 @@ function Navbar() {
       <div className={Style.container}>
         <h3>
           <Link to="/">
-            New.<span className={Style.me}>ME</span>
+            HER2.<span className={Style.me}>ME</span>
           </Link>
         </h3>
 
