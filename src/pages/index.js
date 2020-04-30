@@ -144,6 +144,15 @@ class Landing extends React.Component {
             <h2>Lorem Lorem</h2>
             <p>p3w asdf aasdf asdf sdf agsdafg</p>
           </div>
+
+          <div className={Sect.sect4}>
+            <div className={Sect.flex4}>
+              <div>One</div>
+              <div>Two</div>
+              <div>Three</div>
+              <div>Four</div>
+            </div>
+          </div>
         </Layout>
       </>
     )

@@ -8,7 +8,7 @@ import { Button as TinaButton } from "@tinacms/styles"
 import { Wysiwyg } from "@tinacms/fields"
 import { TinaField } from "tinacms"
 
-class Landing extends React.Component {
+class About extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -73,7 +73,7 @@ const BlogPostForm = {
   ],
 }
 
-export default liveRemarkForm(Landing, BlogPostForm)
+export default liveRemarkForm(About, BlogPostForm)
 export const query = graphql`
   query MyQuery3 {
     site {

@@ -59,7 +59,7 @@ function Navbar() {
                 <div className={Style.drop}>
                   <Link to="/">Clinical Trials</Link>
                   <Link to="/">Fake Treatments</Link>
-                  <Link to="/">Herceptin (Trastuzumab)</Link>
+                  <Link to="/">link3</Link>
                   <Link to="/">link4</Link>
                   <Link to="/">link5</Link>
                   <Link to="/">link6</Link>

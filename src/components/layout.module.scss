@@ -225,3 +225,28 @@ html {
     padding-bottom: 2rem;
   }
 }
+
+////////////Posts //////////////////////@extend
+
+.sect4 {
+  .flex4 {
+    border: 1px solid red;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    > div {
+      flex: 1;
+      height: 100px;
+      min-width: 250px;
+      border: 2px solid blue;
+    }
+  }
+}

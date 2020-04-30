@@ -1,23 +1,36 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import { remarkForm, liveRemarkForm } from "gatsby-tinacms-remark"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Sect from "../components/layout.module.scss"
+import { Button as TinaButton } from "@tinacms/styles"
+import { Wysiwyg } from "@tinacms/fields"
+import { TinaField } from "tinacms"
 
 class BlogPosts extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const { isEditing, setIsEditing } = this.props
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        {process.env.NODE_ENV !== "production" && (
+          <TinaButton primary onClick={() => setIsEditing(p => !p)}>
+            {isEditing ? "Preview" : "Edit"}
+          </TinaButton>
+        )}
         <div className={Sect.mcon}>
           <SEO title="All posts" />
-          <Bio />
+          <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
+            <div>
+              <h3>Latest Posts</h3>
+            </div>
+          </TinaField>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -52,7 +65,7 @@ class BlogPosts extends React.Component {
   }
 }
 
-export default BlogPosts
+export default liveRemarkForm(BlogPosts)
 
 export const pageQuery = graphql`
   query {
@@ -75,6 +88,17 @@ export const pageQuery = graphql`
           }
         }
       }
+    }
+
+    markdownRemark(
+      fileRelativePath: { eq: "/content/blog/testing/traditional.md" }
+    ) {
+      id
+      frontmatter {
+        title
+      }
+      html
+      ...TinaRemark
     }
   }
 `
