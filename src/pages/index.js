@@ -11,6 +11,7 @@ import { TinaField } from "tinacms"
 import { Button as TinaButton } from "@tinacms/styles"
 import Arrow from "../../content/assets/next.svg"
 import Two from "../../content/assets/two.svg"
+import Title from "../components/seo"
 
 class Landing extends React.Component {
   render() {
@@ -21,6 +22,7 @@ class Landing extends React.Component {
 
     return (
       <>
+        <Title title="HER2 & ME" />
         <Layout location={this.props.location} title={siteTitle}>
           {process.env.NODE_ENV !== "production" && (
             <TinaButton primary onClick={() => setIsEditing(p => !p)}>
@@ -133,7 +135,7 @@ class Landing extends React.Component {
                 </Link>
               </div>
               <div>
-                <img src={QPhoto}></img>
+                <img src={MedPhoto}></img>
               </div>
             </div>
           </div>

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `newSite`,
+    title: `HER2.ME`,
     author: `Anon`,
-    description: `New site testing`,
+    description: `HER2 Cancer Information Site`,
     siteUrl: `https://gatsby-starter-tinacms-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `anonher2`,
     },
   },
   plugins: [

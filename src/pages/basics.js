@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { remarkForm } from "gatsby-tinacms-remark"
 import Sect from "../components/layout.module.scss"
+import Title from "../components/seo"
 
 class Landing extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Landing extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Title title="Basic Information" />
         <div className={Sect.mcon}>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <section
