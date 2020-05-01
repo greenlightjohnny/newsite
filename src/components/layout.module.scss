@@ -44,6 +44,17 @@ html {
   position: absolute;
   //bottom: 0;
   width: 100%;
+
+  p {
+    color: hsla(0, 0%, 100%, 0.5);
+    display: inline-block;
+  }
+  img {
+    height: 28px;
+    margin-bottom: 0;
+    display: inline-block;
+    padding-left: 7px;
+  }
 }
 
 .ftop {
@@ -223,12 +234,15 @@ html {
 
   p {
     padding-bottom: 2rem;
+    margin-bottom: 0;
   }
 }
 
 ////////////Posts //////////////////////@extend
 
 .sect4 {
+  background-color: #f8f9fa;
+  padding-top: 3rem;
   .flex4 {
     border: 1px solid red;
     min-height: 200px;
@@ -244,9 +258,17 @@ html {
 
     > div {
       flex: 1;
-      height: 100px;
+      height: 300px;
       min-width: 250px;
-      border: 2px solid blue;
+
+      //border: 2px solid blue;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px,
+        rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+        rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
+      border-radius: 9px;
+      margin: 2rem 1rem;
     }
   }
 }

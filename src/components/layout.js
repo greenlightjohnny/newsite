@@ -6,6 +6,7 @@ import { withPlugin } from "tinacms"
 import { createRemarkButton } from "gatsby-tinacms-remark"
 import slugify from "slugify"
 import Sect from "./layout.module.scss"
+import Logo from "../../content/assets/gatslogo.svg"
 
 class Layout extends React.Component {
   render() {
@@ -112,6 +113,10 @@ class Layout extends React.Component {
         <footer className={Sect.footer}>
           © {new Date().getFullYear()}, all rights reserved
           {` `}
+          <div>
+            <p>Happily created using: </p>
+            <img className={Sect.footerlogo} src={Logo}></img>
+          </div>
         </footer>
       </div>
     )
