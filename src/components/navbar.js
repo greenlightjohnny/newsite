@@ -28,7 +28,7 @@ function Navbar() {
               <Link className={Style.darrow} to="/basics">
                 Basics
                 <div className={Style.drop}>
-                  <Link to="/">What is HER2?</Link>
+                  <Link to="/whatis">What is HER2?</Link>
                   <Link to="/">Stages</Link>
                   <Link to="/">History</Link>
                   <Link to="/">HER2+ (Positive)</Link>
