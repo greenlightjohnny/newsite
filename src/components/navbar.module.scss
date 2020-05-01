@@ -29,7 +29,7 @@
   }
 
   a {
-    color: black;
+    //color: black;
     //position: relative;
     box-shadow: none;
   }
@@ -335,5 +335,13 @@ li:hover .drop {
 }
 
 .me {
+  color: #475edf;
+}
+
+a {
+  color: black;
+}
+
+.active {
   color: #475edf;
 }
