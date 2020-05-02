@@ -125,7 +125,7 @@
       li {
         padding-left: 30px;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         cursor: pointer;
       }
     }
@@ -340,6 +340,12 @@ li:hover .drop {
 
 a {
   color: black;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    transition: all ease-in-out 0.2s;
+    color: #475edf;
+  }
 }
 
 .active {

@@ -81,7 +81,7 @@ export const query = graphql`
       }
     }
     markdownRemark(
-      fileRelativePath: { eq: "/content/blog/testing/traditional.md" }
+      fileRelativePath: { eq: "/content/assets/pagesmd/traditional.md" }
     ) {
       id
       frontmatter {

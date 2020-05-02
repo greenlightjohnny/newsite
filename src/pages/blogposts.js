@@ -9,6 +9,7 @@ import Sect from "../components/layout.module.scss"
 import { Button as TinaButton } from "@tinacms/styles"
 import { Wysiwyg } from "@tinacms/fields"
 import { TinaField } from "tinacms"
+import Style from "./blog.module.scss"
 
 class BlogPosts extends React.Component {
   render() {
@@ -24,17 +25,16 @@ class BlogPosts extends React.Component {
             {isEditing ? "Preview" : "Edit"}
           </TinaButton>
         )}
-        <div className={Sect.mcon}>
+        <div>
+          <h3>Latest Posts</h3>
+        </div>
+        <div className={Style.mcon}>
           <SEO title="All posts" />
-          <TinaField name="rawMarkdownBody" Component={Wysiwyg}>
-            <div>
-              <h3>Latest Posts</h3>
-            </div>
-          </TinaField>
+          <TinaField name="rawMarkdownBody" Component={Wysiwyg}></TinaField>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article key={node.fields.slug}>
+              <article className={Style.blogp} key={node.fields.slug}>
                 <header>
                   <h3
                     style={
@@ -74,7 +74,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           excerpt
@@ -82,7 +85,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             title
             description
           }
